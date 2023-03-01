@@ -1,0 +1,15 @@
+FUNCTION Is_palindrone(s,l,r) : 
+VAR
+    l,r:INTEGER
+BEGIN
+    IF (length(s)<2) THEN
+        RETURN true;
+    END_IF
+    l=0;
+    r=length(s)-1;
+    IF (s[left]=s[right]) THEN
+        Is_palindrone(s,l+1,r-1)
+    
+    END_IF
+    RETURN Is_palindrone(s,l,r)
+END
